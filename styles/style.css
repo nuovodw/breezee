@@ -3,3 +3,45 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+.container {
+	display: flex;
+	border: 1px black solid;
+	margin: 1rem;
+}
+
+.top-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.top-container .search-bar {
+	display: flex;
+	justify-content: flex-end;
+}
+.top-container input {
+	width: 50%;
+}
+
+.middle-container {
+	display: flex;
+	flex-direction: column;
+}
+.middle-container .middle-top {
+	display: flex;
+	justify-content: space-between;
+}
+.middle-container .middle-bottom {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: space-between;
+}
+
+.bottom-container {
+	display: flex;
+	flex-direction: column;
+}
+.bottom-container .hourly {
+	display: flex;
+	justify-content: space-between;
+}
