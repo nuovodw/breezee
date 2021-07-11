@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
 .container {
 	display: flex;
 	border: 1px black solid;
@@ -34,7 +38,6 @@
 .middle-container .middle-bottom {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	justify-content: space-between;
 }
 
 .bottom-container {
