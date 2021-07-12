@@ -22,7 +22,7 @@ let weatherToday = {
 		const cityKey = data[0].Key;
 		const cityName = data[0].EnglishName;
 		fetch(
-			`https://dataservice.accuweather.com/currentconditions/v1/${cityKey}?apikey=${this.api}&details=true`,
+			`https://cors-anywhere.herokuapp.com/https://dataservice.accuweather.com/currentconditions/v1/${cityKey}?apikey=${this.api}&details=true`,
 		)
 			.then((response) => response.json())
 			.then((data) => this.displayWeather(data));
@@ -42,4 +42,4 @@ let weatherToday = {
 
 weatherToday.getCity('chicago');
 
-// to do: hi/lo, weather icons; sunrise/set, change of rain
+// to do: weather icons; sunrise/set, change of rain
