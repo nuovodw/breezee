@@ -6,6 +6,7 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
+	background: rgb(156, 221, 245);
 }
 
 .container {
@@ -33,6 +34,12 @@ body {
 .middle-container .middle-top {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 1.5rem;
+}
+.middle-container .temp-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .middle-container .middle-bottom {
 	display: grid;
@@ -45,5 +52,9 @@ body {
 }
 .bottom-container .hourly {
 	display: flex;
-	justify-content: space-between;
+	justify-content: start;
+}
+.bottom-container .hourly-card {
+	display: flex;
+	flex-direction: column;
 }
