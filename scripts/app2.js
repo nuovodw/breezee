@@ -39,6 +39,10 @@ const hourFiveTemp = document.querySelector('.hour_five-temp');
 const hourFiveIcon = document.querySelector('.hour_five-icon');
 const hourFiveTime = document.querySelector('.hour_five-time');
 
+// search
+const searchText = document.querySelector('#search-text');
+const searchBox = document.querySelector('.search-bar button');
+
 // Today's date
 const today = new Date();
 const day = today.getDay();
@@ -176,6 +180,20 @@ let weatherToday = {
 			hour12: true,
 		});
 	},
+
+	search: function () {
+		this.getCity(searchText.value);
+	},
 };
 
-weatherToday.getCity('tokyo');
+searchBox.addEventListener('click', () => {
+	weatherToday.search();
+});
+
+searchText.addEventListener('keyup', (e) => {
+	if (e.key === 'Enter') {
+		weatherToday.search();
+	}
+});
+
+weatherToday.getCity('chicago');
