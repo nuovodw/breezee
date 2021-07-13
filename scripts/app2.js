@@ -1,3 +1,5 @@
+'use strict';
+
 const currentCity = document.querySelector('.city');
 const currentTemp = document.querySelector('.temp');
 const weatherText = document.querySelector('.weather-text');
@@ -15,9 +17,9 @@ const humidity = document.querySelector('.humidity');
 const todaysDateDisplay = document.querySelector('.today-date-info');
 
 // Hourly Forecast
-const hourlyCurrentTemp = document.querySelector('.current-temp');
-const currentWeatherIcon = document.querySelector('.current-weather-icon');
-const currentTime = document.querySelector('.current-time');
+// const hourlyCurrentTemp = document.querySelector('.current-temp');
+// const currentWeatherIcon = document.querySelector('.current-weather-icon');
+// const currentTime = document.querySelector('.current-time');
 
 const hourOneTemp = document.querySelector('.hour_one-temp');
 const hourOneIcon = document.querySelector('.hour_one-icon');
@@ -88,6 +90,7 @@ let weatherToday = {
 		const lon = data.coord.lon;
 		const lat = data.coord.lat;
 		currentCity.innerText = data.name;
+
 		fetch(
 			`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${this.api}`,
 		)
@@ -133,11 +136,9 @@ let weatherToday = {
 			day: 'numeric',
 		});
 
-		// `${days[day]}, ${months[month]} ${date}`;
-
 		// Hourly Forecast
-		hourlyCurrentTemp.innerText = Math.round(data.current.temp) + '°';
-		currentWeatherIcon.src = `https://openweathermap.org/img/wn/${data.current.weather[0].icon}.png`;
+		// hourlyCurrentTemp.innerText = Math.round(data.current.temp) + '°';
+		// currentWeatherIcon.src = `https://openweathermap.org/img/wn/${data.current.weather[0].icon}.png`;
 
 		hourOneTemp.innerText = Math.round(data.hourly[3].temp) + '°';
 		hourOneIcon.src = `https://openweathermap.org/img/wn/${data.hourly[3].weather[0].icon}.png`;

@@ -1,22 +1,56 @@
+:root {
+	--body-bg-color: linear-gradient(140.54deg, #608d00 0%, #d30000 72.37%),
+		linear-gradient(360deg, #0029ff 0%, #8fff00 100%),
+		radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%),
+		radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+	background-blend-mode: color-dodge, overlay, difference, normal;
+	--container-bg-color: #f9f9f9;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+/* html {
+	background: linear-gradient(180deg, #ffb7b7 0%, #727272 100%),
+		radial-gradient(60.91% 100% at 50% 0%, #ffd1d1 0%, #260000 100%),
+		linear-gradient(127.43deg, #00ffff 0%, #ffffff 100%),
+		radial-gradient(100.22% 100% at 70.57% 0%, #ff0000 0%, #00ffe0 100%),
+		linear-gradient(64.82deg, #dbff00 0%, #3300ff 100%);
+	background-blend-mode: screen, overlay, color-burn, color-dodge, normal;
+	background-size: cover;
+} */
+
 body {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
 	font-family: 'Roboto', sans-serif;
-	background: rgb(156, 221, 245);
 }
 
+.wrapper {
+	margin: 2rem auto;
+	padding: 0.25rem;
+	height: 100vh;
+	max-width: 40rem;
+}
 .container {
 	display: flex;
-	margin: 1rem 1rem 2rem;
+	flex-direction: column;
+	margin-bottom: 1rem;
+	/* background-color: var(--container-bg-color); */
 }
 
 .top-container {
 	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
+}
+.top-container .city {
+	font-size: 1.3rem;
+	font-weight: 700;
 }
 
 .top-container .search-bar {
@@ -49,7 +83,9 @@ body {
 .bottom-container {
 	display: flex;
 	flex-direction: column;
+	font-size: 0.5rem;
 }
+
 .bottom-container .hourly {
 	display: flex;
 	justify-content: start;
