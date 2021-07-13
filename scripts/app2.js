@@ -23,6 +23,22 @@ const hourOneTemp = document.querySelector('.hour_one-temp');
 const hourOneIcon = document.querySelector('.hour_one-icon');
 const hourOneTime = document.querySelector('.hour_one-time');
 
+const hourTwoTemp = document.querySelector('.hour_two-temp');
+const hourTwoIcon = document.querySelector('.hour_two-icon');
+const hourTwoTime = document.querySelector('.hour_two-time');
+
+const hourThreeTemp = document.querySelector('.hour_three-temp');
+const hourThreeIcon = document.querySelector('.hour_three-icon');
+const hourThreeTime = document.querySelector('.hour_three-time');
+
+const hourFourTemp = document.querySelector('.hour_four-temp');
+const hourFourIcon = document.querySelector('.hour_four-icon');
+const hourFourTime = document.querySelector('.hour_four-time');
+
+const hourFiveTemp = document.querySelector('.hour_five-temp');
+const hourFiveIcon = document.querySelector('.hour_five-icon');
+const hourFiveTime = document.querySelector('.hour_five-time');
+
 // Today's date
 const today = new Date();
 const day = today.getDay();
@@ -110,10 +126,50 @@ let weatherToday = {
 		hourlyCurrentTemp.innerText = Math.round(data.current.temp) + '°';
 		currentWeatherIcon.src = `https://openweathermap.org/img/wn/${data.current.weather[0].icon}.png`;
 
-		hourOneTemp.innerText = Math.round(data.hourly[0].temp) + '°';
-		hourOneIcon.src = `https://openweathermap.org/img/wn/${data.hourly[0].weather[0].icon}.png`;
+		hourOneTemp.innerText = Math.round(data.hourly[1].temp) + '°';
+		hourOneIcon.src = `https://openweathermap.org/img/wn/${data.hourly[1].weather[0].icon}.png`;
 		hourOneTime.innerText = new Date(
 			data.hourly[1].dt * 1000,
+		).toLocaleTimeString('en-US', {
+			timeZone: `${data.timezone}`,
+			hour: 'numeric',
+			hour12: true,
+		});
+
+		hourTwoTemp.innerText = Math.round(data.hourly[2].temp) + '°';
+		hourTwoIcon.src = `https://openweathermap.org/img/wn/${data.hourly[2].weather[0].icon}.png`;
+		hourTwoTime.innerText = new Date(
+			data.hourly[2].dt * 1000,
+		).toLocaleTimeString('en-US', {
+			timeZone: `${data.timezone}`,
+			hour: 'numeric',
+			hour12: true,
+		});
+
+		hourThreeTemp.innerText = Math.round(data.hourly[3].temp) + '°';
+		hourThreeIcon.src = `https://openweathermap.org/img/wn/${data.hourly[3].weather[0].icon}.png`;
+		hourThreeTime.innerText = new Date(
+			data.hourly[3].dt * 1000,
+		).toLocaleTimeString('en-US', {
+			timeZone: `${data.timezone}`,
+			hour: 'numeric',
+			hour12: true,
+		});
+
+		hourFourTemp.innerText = Math.round(data.hourly[4].temp) + '°';
+		hourFourIcon.src = `https://openweathermap.org/img/wn/${data.hourly[4].weather[0].icon}.png`;
+		hourFourTime.innerText = new Date(
+			data.hourly[4].dt * 1000,
+		).toLocaleTimeString('en-US', {
+			timeZone: `${data.timezone}`,
+			hour: 'numeric',
+			hour12: true,
+		});
+
+		hourFiveTemp.innerText = Math.round(data.hourly[5].temp) + '°';
+		hourFiveIcon.src = `https://openweathermap.org/img/wn/${data.hourly[5].weather[0].icon}.png`;
+		hourFiveTime.innerText = new Date(
+			data.hourly[5].dt * 1000,
 		).toLocaleTimeString('en-US', {
 			timeZone: `${data.timezone}`,
 			hour: 'numeric',
@@ -122,4 +178,4 @@ let weatherToday = {
 	},
 };
 
-weatherToday.getCity('chicago');
+weatherToday.getCity('tokyo');
