@@ -191,17 +191,20 @@ let weatherToday = {
 	},
 
 	search: function () {
-		this.getCity(searchText.value);
+		this.getCity(searchText.value.trim());
 	},
 };
 
 searchBox.addEventListener('click', () => {
 	weatherToday.search();
+	searchText.value = '';
 });
 
 searchText.addEventListener('keyup', (e) => {
+	e.preventDefault();
 	if (e.key === 'Enter') {
 		weatherToday.search();
+		searchText.value = '';
 	}
 });
 
