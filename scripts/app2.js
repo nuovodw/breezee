@@ -43,7 +43,7 @@ const hourFiveTime = document.querySelector('.hour_five-time');
 
 // search
 const searchText = document.querySelector('#search-text');
-const searchBox = document.querySelector('.search-bar button');
+const searchBox = document.querySelector('.search-bar');
 
 // Today's date
 const today = new Date();
@@ -121,13 +121,13 @@ let weatherToday = {
 		hi.innerText = Math.round(data.daily[0].temp.max) + '°';
 		low.innerText = Math.round(data.daily[0].temp.min) + '°';
 		weatherIcon.src = `https://openweathermap.org/img/wn/${data.current.weather[0].icon}.png`;
-		feelsLike.innerText = data.current.feels_like + '°';
+		feelsLike.innerText = Math.round(data.current.feels_like) + '°';
 		sunrise.innerHTML = readableSunrise;
 		sunset.innerHTML = readableSunset;
 
 		wind.innerText = data.current.wind_speed + 'mi/h';
 
-		uv.innerText = 'UV: ' + data.current.uvi;
+		uv.innerText = data.current.uvi;
 		humidity.innerText = data.current.humidity + '%';
 		todaysDateDisplay.innerText = today.toLocaleDateString('en-US', {
 			timeZone: `${data.timezone}`,
