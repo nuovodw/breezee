@@ -21,15 +21,20 @@
 		<div class="wrapper">
 			<div class="container top-container">
 				<!-- <div class="menu"><i class="fas fa-bars"></i></div> -->
-				<div class="city">Chicago</div>
-				<div class="search-bar">
-					<input
-						type="text"
-						value=""
-						placeholder="Enter your search here..."
-						id="search-text"
-					/>
-					<button><i class="fas fa-search"></i></button>
+				<div class="top-top">
+					<div class="city">Chicago</div>
+					<div class="search-bar">
+						<input
+							type="text"
+							value=""
+							placeholder="Enter your search here..."
+							id="search-text"
+						/>
+						<button><i class="fas fa-search"></i></button>
+					</div>
+				</div>
+				<div class="top-bottom today today-date-info">
+					Friday - Jan 03 (Today)
 				</div>
 			</div>
 
@@ -48,41 +53,78 @@
 					</div>
 				</div>
 
-				<div class="middle-bottom">
-					<div class="sunrise-container">
-						<div class="sunrise-icon">☀</div>
-						<div class="sunrise-time">0</div>
+				<div class="middle-bottom hourly">
+					<div class="hourly-card">
+						<div class="hour_one-temp hourly-temp">19°</div>
+						<img src="" class="hour_one-icon hourly-icon" />
+						<div class="hour_one-time">12pm</div>
 					</div>
-					<div class="sunset-container">
-						<div class="sunset-icon">☀</div>
-						<div class="sunset-time">0</div>
+					<div class="hourly-card">
+						<div class="hour_two-temp hourly-temp">22°</div>
+						<img src="" class="hour_two-icon hourly-icon" />
+						<div class="hour_two-time">1pm</div>
 					</div>
-					<div class="wind-container">
-						<div class="wind-icon">💨</div>
-						<div class="wind-speed">10m/h</div>
+					<div class="hourly-card">
+						<div class="hour_three-temp hourly-temp">23°</div>
+						<img src="" class="hour_three-icon hourly-icon" />
+						<div class="hour_three-time">3pm</div>
 					</div>
-					<div class="uv_index-container">
-						<div class="uv-icon">🔆</div>
-						<div class="uv">UV: 3</div>
+					<div class="hourly-card">
+						<div class="hour_four-temp hourly-temp">24°</div>
+						<img src="" class="hour_four-icon hourly-icon" />
+						<div class="hour_four-time">4pm</div>
 					</div>
-					<div class="humidity-container">
-						<div class="humidity-icon">💧</div>
-						<div class="humidity">17%</div>
+					<div class="hourly-card">
+						<div class="hour_five-temp hourly-temp">24°</div>
+						<img src="" class="hour_five-icon hourly-icon" />
+						<div class="hour_five-time">5pm</div>
 					</div>
 				</div>
 			</div>
 			<div class="container bottom-container">
-				<div>Feels like <span class="feels-like"> 77°</span></div>
-				<div class="bottom-top today today-date-info">
-					Friday - Jan 03 (Today)
-				</div>
-				<div class="bottom-bottom hourly">
+				<div class="bottom-bottom">
+					<div class="sunrise-container detail-container">
+						<div class="sunrise-icon detail-icon">
+							<i class="far fa-sun"></i><i class="fas fa-arrow-up"></i>
+						</div>
+						<div class="additional-detail">Sunrise</div>
+						<div class="sunrise-time detail-text">0</div>
+					</div>
+					<div class="sunset-container detail-container">
+						<div class="sunset-icon detail-icon">
+							<i class="far fa-sun"></i><i class="fas fa-arrow-down"></i>
+						</div>
+						<div class="additional-detail">Sunset</div>
+						<div class="sunset-time detail-text">0</div>
+					</div>
+					<div class="feels_like-container detail-container">
+						<div class="feels_like-icon detail-icon">
+							<i class="fas fa-thermometer-three-quarters"></i>
+						</div>
+						<div class="additional-detail">Feels like</div>
+						<div class="feels-like detail-text">77°</div>
+					</div>
+					<div class="wind-container detail-container">
+						<div class="wind-icon detail-icon"><i class="fas fa-wind"></i></div>
+						<div class="additional-detail">Wind</div>
+						<div class="wind-speed detail-text">10m/h</div>
+					</div>
+					<div class="uv_index-container detail-container">
+						<div class="uv-icon detail-icon">
+							<i class="fas fa-umbrella-beach"></i>
+						</div>
+						<div class="additional-detail">UV</div>
+						<div class="uv detail-text">UV: 3</div>
+					</div>
+					<div class="humidity-container detail-container">
+						<div class="humidity-icon detail-icon">
+							<i class="fas fa-tint"></i>
+						</div>
+						<div class="additional-detail">Humidity</div>
+						<div class="humidity detail-text">17%</div>
+					</div>
+
 					<!-- <div class="hourly-card">
-						<div class="current-temp"></div>
-						<img src="" class="current-weather-icon" />
-						<div class="current-time">Now</div>
-					</div> -->
-					<div class="hourly-card">
 						<div class="hour_one-temp">19°</div>
 						<img src="" class="hour_one-icon" />
 						<div class="hour_one-time">12pm</div>
@@ -106,7 +148,7 @@
 						<div class="hour_five-temp">24°</div>
 						<img src="" class="hour_five-icon" />
 						<div class="hour_five-time">5pm</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
