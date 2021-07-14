@@ -81,16 +81,15 @@ body {
 }
 
 .top-container input {
-	border: none;
+	/* border: none;
 	outline: none;
 	background: var(--body-bg-color);
 	color: var(--font-color-main);
-	/* padding: 10px 5px 10px 2.5px; */
 	margin-bottom: 0.5rem;
 	height: 1.5rem;
 	width: 13rem;
 	border-radius: 10px;
-	box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px #fff;
+	box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px #fff; */
 }
 ::placeholder {
 	font-size: 10px;
