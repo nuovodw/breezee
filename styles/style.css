@@ -1,31 +1,9 @@
 :root {
 	--font-color-main: #555;
 	--font-color-accent: rgb(36, 36, 36);
-	/* --font-color-accent: #fff; */
-	/* --font-color-main: rgb(189, 189, 189); */
-	/* --font-color-main: #000; */
-	/* --font-color-accent: rgb(59, 59, 59); */
 	--body-bg-color: #ecf0f3;
 	--accent-bg-color: rgb(184, 246, 248);
-	/* --accent-bg-color: radial-gradient(
-		circle,
-		rgba(175, 220, 238, 1) 0%,
-		rgba(161, 214, 243, 1) 100%
-	); */
-
-	/* --body-bg-color: linear-gradient(
-		180deg,
-		rgba(81, 164, 219, 1) 0%,
-		rgba(115, 186, 225, 1) 100%
-	);
-	background-blend-mode: color-dodge, overlay, difference, normal; */
 	--container-bg-color: #f9f9f9;
-
-	/* --small-container-bg-color: linear-gradient(
-		180deg,
-		rgba(101, 174, 223, 1) 0%,
-		rgba(110, 180, 224, 0.46803652968036524) 100%
-	); */
 	--wrapper-border-color: #4c6c7e2f;
 }
 
@@ -68,15 +46,13 @@ body {
 .container {
 	display: flex;
 	flex-direction: column;
-	/* background-color: var(--container-bg-color); */
 }
 
 .top-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* margin-top: 0.5rem; */
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 	padding: 0.5rem;
 }
 
@@ -96,7 +72,7 @@ body {
 .top-container .search-bar {
 	border-radius: 8px;
 	box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px #fff;
-	margin: 0.5rem 0;
+	margin-top: 1rem;
 }
 
 .top-container .city {
@@ -151,6 +127,9 @@ body {
 	color: var(--font-color-main);
 	font-size: 1.25rem;
 	padding: 1.85rem 0 0 1.5rem;
+}
+.middle-container .low-temp {
+	padding-bottom: 4px;
 }
 
 .middle-container .hourly {
