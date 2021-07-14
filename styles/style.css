@@ -60,7 +60,7 @@ body {
 .wrapper-box {
 	width: 430px;
 	height: 700px;
-	border-radius: 8px;
+	border-radius: 40px;
 	background-color: var(--body-bg-color);
 	box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
 }
