@@ -79,10 +79,7 @@ body {
 	margin-bottom: 2rem;
 	padding: 0.5rem;
 }
-/* .top-container .search-bar {
-	display: flex;
-	justify-content: flex-end;
-} */
+
 .top-container input {
 	border: none;
 	/* outline: none; */
@@ -208,4 +205,13 @@ body {
 }
 .detail-text {
 	padding-bottom: 0.8rem;
+}
+
+@media (min-width: 375px) {
+	.wrapper {
+		max-width: 21rem;
+	}
+	.top-container input {
+		width: 17rem;
+	}
 }
