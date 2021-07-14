@@ -86,9 +86,6 @@ body {
 	background: none;
 	text-align: center;
 	color: var(--font-color-main);
-	border-radius: 10px;
-	box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px #fff;
-	margin-bottom: 0.5rem;
 	height: 1.5rem;
 	width: 13rem;
 }
@@ -96,7 +93,10 @@ body {
 	font-size: 10px;
 	text-align: center;
 }
-.top-container .search-text {
+.top-container .search-bar {
+	border-radius: 10px;
+	box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px #fff;
+	margin: 0.5rem 0;
 }
 
 .top-container .city {
