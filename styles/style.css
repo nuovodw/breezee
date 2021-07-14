@@ -81,9 +81,11 @@ body {
 }
 
 .top-container input {
-	/* border: none;
+	border: none;
 	outline: none;
-	background: var(--body-bg-color);
+	background: none;
+	font-size: 18px;
+	/* 
 	color: var(--font-color-main);
 	margin-bottom: 0.5rem;
 	height: 1.5rem;
@@ -95,10 +97,11 @@ body {
 	font-size: 10px;
 	text-align: center;
 }
-/* .top-container #search-text {
+.top-container #search-text {
 	margin-bottom: 0.5rem;
-	border-radius: 0;
-} */
+	border-radius: 10px;
+	box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px #fff;
+}
 
 .top-container .city {
 	font-size: 1.6rem;
