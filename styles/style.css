@@ -85,7 +85,7 @@ body {
 } */
 .top-container input {
 	border: none;
-	outline: none;
+	/* outline: none; */
 	background: var(--body-bg-color);
 	color: var(--font-color-main);
 	/* padding: 10px 5px 10px 2.5px; */
