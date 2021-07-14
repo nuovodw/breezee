@@ -78,7 +78,7 @@ body {
 .top-container .city {
 	font-size: 1.6rem;
 	color: var(--font-color-accent);
-	font-weight: 700;
+	font-weight: 900;
 	margin-top: 1rem;
 }
 
@@ -107,6 +107,9 @@ body {
 	color: var(--font-color-accent);
 	margin-bottom: -1.1rem;
 }
+.middle-container .weather-text {
+	font-weight: 700;
+}
 .middle-container .temp-container {
 	display: flex;
 	justify-content: start;
@@ -117,7 +120,6 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	font-size: 6rem;
-	letter-spacing: -0.3rem;
 	color: var(--font-color-accent);
 }
 .middle-container .high-low {
@@ -182,6 +184,8 @@ body {
 	padding-bottom: 4px;
 }
 .detail-text {
+	color: var(--font-color-accent);
+	font-weight: 600;
 	padding-bottom: 0.8rem;
 }
 
@@ -191,5 +195,10 @@ body {
 	}
 	.top-container input {
 		width: 17rem;
+	}
+
+	.middle-container .current_icon-container,
+	.middle-container .temp-container {
+		padding-left: 0.5rem;
 	}
 }
