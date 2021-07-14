@@ -91,6 +91,8 @@ body {
 	/* padding: 10px 5px 10px 2.5px; */
 	height: 1.5rem;
 	width: 13rem;
+	border-radius: 10px;
+	box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px #fff;
 }
 ::placeholder {
 	font-size: 10px;
@@ -98,8 +100,8 @@ body {
 }
 .top-container #search-text {
 	margin-bottom: 0.5rem;
-	border-radius: 10px;
-	box-shadow: 4px 4px 4px #cbced1, -4px -4px 4px #fff;
+	/* border-radius: 10px;
+	box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px #fff; */
 }
 
 .top-container .city {
