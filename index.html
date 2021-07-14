@@ -20,6 +20,7 @@
 	<body>
 		<div class="wrapper">
 			<div class="container top-container">
+				<!-- <div class="menu"><i class="fas fa-bars"></i></div> -->
 				<div class="city">Chicago</div>
 				<div class="search-bar">
 					<input
@@ -29,23 +30,24 @@
 						id="search-text"
 					/>
 					<button><i class="fas fa-search"></i></button>
-					<div class="menu"><i class="fas fa-bars"></i></div>
 				</div>
 			</div>
+
 			<div class="container middle-container">
-				<div class="middle-top">
-					<div class="temp-container">
-						<div class="temp">70°</div>
-						<div class="weather-text">Sunny</div>
-						<div class="high-low">
-							hi <span class="hi">0°/</span>low<span class="low"> 0°</span>
-						</div>
-					</div>
-					<div class="current_icon-container">
-						<img class="weather-icon" />
-						<div>Feels like <span class="feels-like"> 77°</span></div>
+				<div class="current_icon-container">
+					<img class="weather-icon" />
+					<span class="weather-text"></span>
+				</div>
+
+				<div class="temp-container">
+					<div class="temp">70°</div>
+					<div class="high-low">
+						<div class="hi-temp"><span class="hi">0°/</span></div>
+						<hr />
+						<div class="low-temp"><span class="low"> 0°</span></div>
 					</div>
 				</div>
+
 				<div class="middle-bottom">
 					<div class="sunrise-container">
 						<div class="sunrise-icon">☀</div>
@@ -70,6 +72,7 @@
 				</div>
 			</div>
 			<div class="container bottom-container">
+				<div>Feels like <span class="feels-like"> 77°</span></div>
 				<div class="bottom-top today today-date-info">
 					Friday - Jan 03 (Today)
 				</div>
