@@ -94,7 +94,7 @@ body {
 	text-align: center;
 }
 .top-container .search-bar {
-	border-radius: 10px;
+	border-radius: 8px;
 	box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px #fff;
 	margin: 0.5rem 0;
 }
