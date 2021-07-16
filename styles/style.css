@@ -66,7 +66,7 @@ body {
 	width: 13rem;
 }
 ::placeholder {
-	font-size: 8px;
+	font-size: 8.5px;
 	text-align: center;
 }
 .top-container .search-bar {
@@ -195,6 +195,9 @@ body {
 	}
 	.top-container input {
 		width: 17rem;
+	}
+	::placeholder {
+		font-size: 11px;
 	}
 
 	.middle-container .current_icon-container,
