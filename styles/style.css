@@ -65,6 +65,9 @@ body {
 	height: 2rem;
 	width: 14rem;
 }
+input[type='text'] {
+	font-size: max(1em, 16px);
+}
 ::placeholder {
 	font-size: 9px;
 	text-align: center;
