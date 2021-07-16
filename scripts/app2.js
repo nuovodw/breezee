@@ -42,7 +42,7 @@ const hourFiveIcon = document.querySelector('.hour_five-icon');
 const hourFiveTime = document.querySelector('.hour_five-time');
 
 // search
-const searchText = document.querySelector('#search-text');
+const searchText = document.querySelector('.search-text');
 // const searchBox = document.querySelector('.search-bar');
 
 // Today's date
@@ -192,7 +192,8 @@ let weatherToday = {
 	},
 
 	search: function () {
-		this.getCity(searchText.value);
+		// this.getCity(searchText.value);
+		this.getCity(searchText.value + ', us');
 	},
 };
 
