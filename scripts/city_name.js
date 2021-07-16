@@ -1,6 +1,5 @@
 'use strict';
 
-let countryCodes = document.querySelector('.country-list');
 let countries = ['US'];
 let newCountries = [];
 
@@ -12,26 +11,18 @@ async function getCountryCode() {
 		let codes = data[i].alpha2Code;
 		countries.push(codes);
 	}
-	console.log(countries);
-	countries = newCountries;
-}
 
-// 	for (let i = 0; i < data.length; i++) {
-// 		document.querySelector('.country-list').innerHTML = `
-// 		<select>
-// 			<option>US</option>
-// 			<option>${data[i].alpha2Code}</option>
-// 		</select>`;
-// 	}
-// }
+	const select = document.getElementById('selectCountry');
+	newCountries = countries.sort();
+	console.log(newCountries);
+
+	for (let i = 0; i < newCountries.length; i++) {
+		let countryCode = newCountries[i];
+		const displayCountryCodes = document.createElement('option');
+		displayCountryCodes.textContent = countryCode;
+		// displayCountryCodes.value = countryCode;
+		select.appendChild(displayCountryCodes);
+	}
+}
 
 getCountryCode();
-
-for (let i = 0; i < countries.length; i++) {
-	let codes = countries[i];
-	console.log(codes);
-	// let countryList = document.createElement('option');
-	// countryList.textContent = codes;
-	// countryList.value = codes;
-	// countryCodes.appenChild(countryList);
-}
