@@ -1,5 +1,5 @@
 'use strict';
-
+const apiKey = config.api;
 const currentCity = document.querySelector('.city');
 const currentTemp = document.querySelector('.temp');
 const weatherText = document.querySelector('.weather-text');
@@ -77,11 +77,11 @@ const date = today.getDate();
 //Current Weather
 
 let weatherToday = {
-	api: 'b7c08248e1395dc2a596374c47216ae9',
+	// api: '',
 
 	getCity: function (city) {
 		fetch(
-			`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${this.api}`,
+			`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`,
 		)
 			.then((response) => response.json())
 			.then((data) => this.getWeatherInfo(data));
@@ -92,7 +92,7 @@ let weatherToday = {
 		currentCity.innerText = data.name;
 
 		fetch(
-			`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${this.api}`,
+			`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`,
 		)
 			.then((response) => response.json())
 			.then((data) => this.displayWeather(data));
