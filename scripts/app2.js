@@ -43,7 +43,7 @@ const hourFiveTime = document.querySelector('.hour_five-time');
 
 // search
 const searchText = document.querySelector('.search-text');
-// const searchBox = document.querySelector('.search-bar');
+const searchBox = document.querySelector('input');
 
 // Today's date
 const today = new Date();
@@ -197,17 +197,19 @@ let weatherToday = {
 	},
 };
 
-// searchBox.addEventListener('click', () => {
-// 	weatherToday.search();
-// 	searchText.value = '';
-// });
-
 searchText.addEventListener('keyup', (e) => {
 	e.preventDefault();
 	if (e.key === 'Enter') {
 		weatherToday.search();
 		searchText.value = '';
 	}
+});
+
+searchBox.addEventListener('click', () => {
+	searchBox.setAttribute(
+		'placeholder',
+		'City Name, 2-letter Country-Code (if outside US)',
+	);
 });
 
 weatherToday.getCity('chicago');
