@@ -43,7 +43,7 @@ const hourFiveTime = document.querySelector('.hour_five-time');
 
 // search
 const searchText = document.querySelector('#search-text');
-const searchBox = document.querySelector('.search-bar');
+// const searchBox = document.querySelector('.search-bar');
 
 // Today's date
 const today = new Date();
@@ -125,7 +125,7 @@ let weatherToday = {
 		sunrise.innerHTML = readableSunrise;
 		sunset.innerHTML = readableSunset;
 
-		wind.innerText = data.current.wind_speed + 'mi/h';
+		wind.innerText = data.current.wind_speed + ' mi/h';
 
 		uv.innerText = data.current.uvi;
 		humidity.innerText = data.current.humidity + '%';
@@ -192,14 +192,14 @@ let weatherToday = {
 	},
 
 	search: function () {
-		this.getCity(searchText.value.trim());
+		this.getCity(searchText.value);
 	},
 };
 
-searchBox.addEventListener('click', () => {
-	weatherToday.search();
-	searchText.value = '';
-});
+// searchBox.addEventListener('click', () => {
+// 	weatherToday.search();
+// 	searchText.value = '';
+// });
 
 searchText.addEventListener('keyup', (e) => {
 	e.preventDefault();
